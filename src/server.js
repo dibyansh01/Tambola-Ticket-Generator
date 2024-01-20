@@ -20,11 +20,16 @@ const pool = new Pool({
     port: process.env.port,
 });
 
-// Route to get all saved tickets
+// Route to get paginated tickets
 app.get("/tickets", async (req, res) => {
     try {
-        // Fetch all rows from the 'tickets' table
-        const result = await pool.query('SELECT * FROM tickets');
+        const page = parseInt(req.query.page) || 1; // Current page number, default is 1
+        const pageSize = parseInt(req.query.pageSize) || 12; // Number of items per page, default is 12
+
+        const offset = (page - 1) * pageSize; // Calculate offset
+
+        // Fetch paginated rows from the 'tickets' table
+        const result = await pool.query('SELECT * FROM tickets ORDER BY id LIMIT $1 OFFSET $2', [pageSize, offset]);
 
         // Extract rows from the result
         const tickets = result.rows;
