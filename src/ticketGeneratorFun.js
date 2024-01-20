@@ -1,5 +1,3 @@
-const saveTicketsToDatabase = require("./db")
-
 
   function generateTicketSet(N) {
     const ticketSets = {};
@@ -100,13 +98,6 @@ const saveTicketsToDatabase = require("./db")
   return number;
   }
   
-  
-  
-  // Example usage:
-  // const ticketSets = generateTicketSet(1);
-  // saveTicketsToDatabase(ticketSets);
-
-
 
 
   module.exports = { generateTicketSet, generateTicket };
