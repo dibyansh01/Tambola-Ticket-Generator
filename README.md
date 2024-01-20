@@ -128,7 +128,7 @@ Example:
 
 Here is the demonstration video:
 
-https://github.com/dibyansh01/Tambola-Ticket-Generator/assets/129924389/166896fc-8fe4-4ded-803b-70c97e735af2
 
+https://github.com/dibyansh01/Tambola-Ticket-Generator/assets/129924389/e81af231-561f-45d7-b3e3-6aaf060775e9
 
 
